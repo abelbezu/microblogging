@@ -1,0 +1,50 @@
+body {
+  
+  
+  background-color: #E4FBFF;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul.tweet_actions{
+	display: block;
+	font-size: 12px;
+	margin-top: 10px;
+	color: rgb(100, 100, 100);
+}
+
+ul.tweet_actions >li{
+	display: inline;
+	margin-left: 20px;
+}
+
+.tweet_actions_container{
+	background: white;
+
+	
+}
+.delete{
+	color: rgb(200, 100, 100);
+}
+
+.main_container{
+	margin-top: 60px;
+}
+
+.profile_pic{
+	border-radius: 5px;
+}
+.bar-10{
+	height: 10px;
+}
+.glyphicon{
+	font-size: 18px;
+	color: #CCC;
+
+
+}
+.user-info{
+	font-weight: bold;
+}

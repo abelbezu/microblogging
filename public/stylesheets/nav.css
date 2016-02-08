@@ -1,0 +1,112 @@
+
+.navbar-default {
+  min-height: 40px;
+  border-radius: 0px;
+  border: 1px solid #E4E4E4;
+  background-color: #fff;
+}
+
+.navbar-default .navbar-brand {
+  color: #444;
+  font-weight: lighter;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #444;
+}
+
+.navbar-default .navbar-nav > li > a {
+  height: 50px;
+  color: #282828;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #282828;
+}
+
+.navbar-default .navbar-nav .active > a, .navbar-default .navbar-nav .active > a:hover, .navbar-default .navbar-nav .active > a:focus {
+  border-bottom: 4px solid #444;
+  color: #282828;
+  background-color: #fff;
+}
+
+.navbar-default .navbar-nav .open > a, .navbar-default .navbar-nav .open > a:hover, .navbar-default .navbar-nav .open > a:focus {
+  color: #282828;
+  background-color: #fff;
+}
+
+.navbar-default .navbar-nav .open > a .caret, .navbar-default .navbar-nav .open > a:hover .caret, .navbar-default .navbar-nav .open > a:focus .caret {
+  border-top-color: #282828;
+  border-bottom-color: #282828;
+}
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #282828;
+  border-bottom-color: #282828;
+  background-color: #fff;
+}
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret, .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #282828;
+  border-bottom-color: #282828;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #282828;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #282828;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #282828;
+    background-color: #fff;
+  }
+}
+
+#topic_input_footer {
+  background-color: #bebebe;
+}
+
+.glyphicon-comment {
+  color: #919191;
+  cursor: pointer;
+}
+
+.glyphicon-comment:hover {
+  color: #777777;
+}
+
+.btn-circle {
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-circle:hover {
+  background-color: #919191;
+}
+
+.social-box-stat {
+  background-color: #bebebe;
+}
+
+.comment_container_main {
+  width: 900px;
+}
+
+.notification_bar > a {
+  color: #494949;
+}
+
+.notification_bar > a:hover {
+  text-decoration: none;
+}

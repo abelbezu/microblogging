@@ -1,0 +1,60 @@
+<% layout('../../layout') -%>
+
+<div class="container">
+	
+	<div class="row">
+		<div class="col-md-3">
+			
+		</div>
+		<div class="col-md-6">
+		<% include /tweet_box %>
+		
+			<% tweets.forEach(function(tweet){ %>
+			<% if(tweet){%>
+					<article username-id = "<%= tweet.creator%>_<%= tweet._id%>">
+						<p>
+						<h5><%= tweet.creator%></h5>
+						
+
+							
+							<%= tweet.tweet%>
+
+						</p>
+						<div>
+							
+							<div class="row tweet_actions_container">
+							<div class="col-md-6">
+								
+							</div>
+							<div class="col-md-6">
+								<ul class = "tweet_actions pull-right">
+
+									<li>
+										
+									</li>
+									<li>
+										
+										
+									</li>
+									<% if(tweet.creator == username){%>
+									<li class = "delete delete-tweet">
+										Delete
+									</li>
+									<%}%>
+								</ul>
+							</div>
+								
+							</div>
+								
+						</div>
+					</article>
+					<% } %>
+				<% }) %>
+
+		</div>
+		<div class="col-md-3">
+			
+		</div>
+	</div>
+
+</div>

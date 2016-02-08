@@ -1,0 +1,129 @@
+<% layout('../../layout') -%>
+
+<div class="container">
+	
+	<div class="row">
+		<div class="col-md-3">
+			<div class="row">
+				<div class="panel panel-default">
+					<div style= "text-align: center;" class="panel-body">
+						<h3><%= username%></h3>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+
+						</div>
+						<div style= "text-align: center;" class="col-md-8">
+							<%= follow_info.followers%> Followers, <%= follow_info.followees%> Following
+						</div>
+						<div class="col-md-2">
+
+						</div>
+
+					</div>
+					<div class="bar-10"></div>
+					<div class="bar-10"></div>
+
+				</div>
+				<div class="panel panel-default">
+					<div  class="panel-body">
+						<% users_to_follow.forEach(function(user_to_follow){%>
+
+						<div class="row">
+							<div style= "text-align: left;" class="col-md-6">
+								<strong> <%= user_to_follow.username%></strong>
+							</div>
+
+							<div style= "text-align: right;" class="col-md-6">
+								<form action="/users/follow" method = "post">
+									<input type = "hidden" name = "followee_name" value="<%= user_to_follow.username%>">
+									<input type = "submit" value = "follow" class = "btn btn-xs btn-primary">
+								</form>
+							</div>
+
+						</div>
+						<div class="bar-10"></div>
+						<%})%>
+						
+						
+
+					</div>
+					
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<% include ../tweets/tweet_box %>
+			<% tweets.forEach(function(tweet){ %>
+			<% if(tweet){%>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-2">
+									<img class = "profile_pic" src="/images/egg.jpg" width = "50" height="50">
+								</div>
+
+								<div class="user-info col-md-10">
+									<%= tweet.tweet._creator.username%>
+								</div>
+							</div>
+							<div class="bar-10"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<%= tweet.tweet.tweet%>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="row pannel_bottom_container">
+					<div class="col-md-12 ">
+
+						<div class="bs-example" data-example-id="disabled-nav-link">
+							<ul class="nav pull-right nav-pills">
+								<% if (tweet.retweetable) {%>
+								<li role="presentation">
+								<a href="">
+									<form action="/tweets/retweet/" method = "post">
+									<input type = "hidden" name = "tweet_id" value="<%= tweet.tweet._id%>">
+									<input type = "submit" class = "btn btn-xs btn-primary" value="Retweet">
+								</form>
+								</a>
+								</li>
+								<% } %>
+
+								<% if (tweet.tweet._creator.username == username) {%>
+								<li role="presentation">
+								<a href="">
+									<form action="/tweets/delete/" method = "post">
+									<input type = "hidden" name = "tweet_id" value="<%= tweet.tweet._id%>">
+									<input type = "submit" class = "btn btn-xs btn-danger" value="Delete">
+								</form>
+								</a>
+								</li>
+								
+								<% } %>
+
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<% }}); %>
+
+
+		</div>
+		<div class="col-md-3">
+			
+		</div>
+	</div>
+
+</div>
